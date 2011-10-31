@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<link rel=stylesheet href="css/reset.css">
+	<link rel=stylesheet href="css/jgrowl.css">
+	<link rel=stylesheet href="lib/ui/ui.css">
+	<link rel=stylesheet href="css/structure.css">
+	<link rel=stylesheet href="css/widgets.css">
+	<link rel="shortcut icon" href="img/favicon.png"/> 
+	<title>Music Box</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/jgrowl.js"></script>
+	<script src="js/php.js"></script>
+    <script src="js/dragout.js"></script>
+    <script src="js/jtools.js"></script>
+    <script src="js/tinyscrollbar.js"></script>
+	<script src="js/postmessage.js"></script>
+	<script src="lib/ui/ui.js"></script>
+
+</head>
+
+<body>
+	<div id="header" class="wrap">
+	    <div id="minimize"></div>
+		<div class="list-select">Select List</div>
+		<div class="lists"></div>
+		<div class="menu-open">Operations</div>
+		<div class="preferences">
+			<a href="#" rel="add">Create</a>
+			<a href="#" rel="delete">Delete</a>
+			<a href="#" rel="rename">Rename</a>
+			<a href="#" rel="login">Reconnect</a>
+			<a href="#" rel="load">Load</a>
+			<a href="#" rel="save">Save</a>
+			<a href="#" rel="help">Help</a>
+						
+		</div>
+	</div>
+	<div id="container" class="wrap">
+		<iframe id="player" frameborder=0 scrolling=no src="http://music.airy.me/flash"></iframe>
+		<div id="playlist" class="hide">
+			<div class="library">
+				<div class="tools"><span class="music" title="Music library">E</span><span class="search" title="Find artists">f</span><span class="similar" title="Similar artists">u</span><span class="save" title="Save playlist">d</span></div>
+				<div class="searchbox">
+					<input type="text" placeholder="filter artists" class="find">
+				</div>
+				<div id="scrollbar2">
+					<div class="scrollbar disable"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+					<div class="viewport">
+						<div class="overview">
+							<div class="artists"></div>
+						</div>					
+					</div>
+				</div>
+			</div>
+			
+			<div class="actions"><span class="lastfm" title="Last.fm tracks">,</span><span class="playlist" title="Playlist tracks">.</span></div>
+			
+			<div id="scrollbar1">
+				<div class="scrollbar disable"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+				<div class="viewport">
+					<div class="overview">
+						<div class="tracks"></div>									 
+					</div>
+				</div>
+			</div>		
+			
+		</div>
+	
+	</div>
+<div class="hide">
+	<div id="dialog"></div>
+	<div id="dialog-confirm"></div>
+</div>
+<div id="ovrl" class="hide">Connecting to VK.com server...</div>
+
+<script src="js/helpers.js"></script>
+<script src="js/classes.js"></script>
+<script src="js/interface.js"></script>
+</body>
+</html>

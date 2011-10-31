@@ -1,0 +1,99 @@
+@font-face {font-family: 'iconic';  src: local('☺'), url('iconic.ttf') format('truetype');}
+@font-face {font-family: 'hoefler'; src: local('☺'), url('hoefler.ttf') format('truetype');}
+
+.hide {display: none;}
+.lt {float: left;}
+.rt {float: right;}
+
+h1 {font-family: Georgia, Times; font-size: 24px;}
+h2 {font-family: Georgia, Times; font-size: 21px;}
+h3 {font-family: Georgia, Times; font-size: 16px; margin: 10px 3px;}
+
+input {background: #E9FFCB; border: 2px solid #6D761A;}
+
+/****** MAIN DOCUMENT *******/
+
+body {background: url(../img/body2.png) no-repeat center top #1b1b1b; font-size: 13px; font-family: Georgia, Times, serif;}
+.wrap {width: 650px;  margin: auto;}
+
+
+/****** HEADER *******/
+
+#minimize {background: url(../img/minimize.png) no-repeat 0 0; width: 22px; height: 13px; position: absolute; right: 0px; cursor: pointer;}
+#minimize:hover {background: url(../img/minimize-over.png) no-repeat 0 0;}
+
+#header {height: 48px; position: relative;}
+#header .list-select, #header .menu-open {background: url(../img/dropdown.png) no-repeat; margin: 10px 30px; cursor: pointer; float: left; color: #959d3c; padding-left: 12px;  width: 137px; line-height: 36px; font-family: 'hoefler'; font-size: 15px;}
+#header .menu-open {float: right;  line-height: 37px;}
+#header .list-select:hover, #header .menu-open:hover {color: #DEE855; }
+
+#header .lists, #header .preferences {position: absolute; top: 42px; width: 147px; padding: 5px 0; z-index: 10; background: url(../img/dropdown-side.png) repeat-y;  display: none; -moz-box-shadow: inset 0 -3px 2px rgba(0, 0, 0, 0.6); -webkit-box-shadow: inset 0 -3px 2px rgba(0, 0, 0, 0.6); box-shadow: inset 0 -3px 2px rgba(0, 0, 0, 0.6);}
+#header .lists {left: 30px;}
+#header .preferences {right: 32px;}
+
+
+#header .lists a {display: block; margin: 7px; padding: 4px; text-decoration: none; color: #959d3c; border-bottom: 1px dotted; font-size: 14px; font-style: oblique;}
+#header .lists a:hover {color: #DEE855;}
+
+.preferences a {display: block; margin: 6px; padding: 5px; text-decoration: none; color: #959d3c; border-bottom: 1px dashed; font-size: 13px; font-style: oblique;}
+.preferences a:hover {color: #DEE855;}
+
+
+/****** CONTAINER *******/
+
+#container {}
+
+#player {margin: 10px; width: 630px; height: 42px;}
+
+#playlist {height: 570px; padding: 10px; margin: 10px; background: rgba(0, 0, 0, 0.3); overflow: hidden;}
+
+.library {float: left; width: 250px; padding-right: 10px; background: url(../img/separator.png) no-repeat right 35px;}
+.library a {color: #959D3C; display: block; font-size: 15px; text-decoration: none; padding: 5px; border-bottom: 1px dotted; line-height: 18px;}
+.library a:hover, .library a.active {color: #DEE855;}
+.library a .delete {font-family: 'iconic'; visibility: hidden; float: right;}
+.library a:hover .delete {visibility: visible;}
+
+.library .tools {color: #959D3C; font-size: 24px; border-bottom: 1px solid #484D21; padding-bottom: 5px; padding-left: 10px; font-family: 'iconic';}
+.library .tools span {margin: 0 10px; cursor: pointer;}
+.library .tools span:hover {color: #DEE855;}
+
+
+/** last fm live search **/
+.library .artists {margin-left: 3px; width: 235px;}
+.library .searchbox .find {margin: 5px 0; padding: 3px; width: 240px;}
+
+
+/** tracks list **/
+.tracks {width: 320px;}
+.tracks a {color: #959D3C; display: block; font-size: 14px; text-decoration: none; margin: 5px; padding: 2px 5px 4px; line-height: 130%; border-bottom: 1px dashed;}
+.tracks a:hover, .tracks .active {color: #DEE855;}
+.tracks .active { }
+
+.tracks span.info {text-align: right; width: 40px; float:right; margin-right: 6px;}
+
+.tracks span.delete, .tracks span.last {font-family: 'iconic'; margin: 0 5px; float:right; font-size: 15px; width: 12px; visibility: hidden;}
+.tracks a:hover span.last, .tracks a:hover span.delete {display: inline; visibility: visible;}
+
+
+.actions {color: #959D3C; font-size: 24px; float: right; width: 335px; border-bottom: 1px solid #484D21; padding-bottom: 5px; padding-left: 10px; font-family: 'iconic';}
+.actions span {margin: 0 10px; cursor: pointer;}
+.actions span:hover, .actions span.active {color: #DEE855;}
+
+
+/*--- scrollbar ---*/
+#scrollbar1 {float: right; width: 340px;}
+#scrollbar1 .viewport {height: 520px; overflow: hidden; position: relative; }
+#scrollbar1 .overview {position: absolute; left: 0; top: 0; }
+#scrollbar1 .scrollbar {float: right;}
+
+#scrollbar2 {float: left; width: 250px;  margin-top: 5px;}
+#scrollbar2 .viewport { width: 235px; height: 490px; overflow: hidden; position: relative; margin-left: 10px;}
+#scrollbar2 .overview {position: absolute; left: 0; top: 0; }
+#scrollbar2 .scrollbar {float: left; margin-right: 6px;}
+
+.scrollbar {background: #333; position: relative; background-position: 0 0; width: 9px; padding: 1px 0;}
+.scrollbar .thumb {background: #656945; height: 0px; width: 9px; cursor: pointer; overflow: hidden; position: absolute; top: 0;}
+.scrollbar .track	{ position: relative; }
+
+#scrollbar1 .disable { display: none; }
+#scrollbar2 .disable { display: none; }
